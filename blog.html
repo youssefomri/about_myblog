@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="jp" xml:lang="jp">
 <head>
-<!-- 2019-07-10 Wed 16:45 -->
+<!-- 2019-07-11 Thu 16:08 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>r4nd blog (Final Report)</title>
@@ -240,76 +240,179 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgf829dab">1. about Jekyll Feedback <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-08 Mon 11:23&gt;</span></span></a>
+<li><a href="#orgf6a3fc6">1. about conv and jekyll (Qiita) <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-11 Thu 14:34&gt;</span></span></a>
 <ul>
-<li><a href="#org54983f9">1.1. How to remove .md file in _posts</a></li>
+<li><a href="#org78992d5">1.1. org-modeからJekyllに変換した際にorg内で記述した画像ファイルがJekyllに反映されない問題の解決方法</a></li>
+<li><a href="#orgc56ac65">1.2. Jekyll(Theme:cayman)でorg-mode編集日時の反映方法</a></li>
 </ul>
 </li>
-<li><a href="#org786dab3">2. Questions for Jekyll <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-04 Thu 23:20&gt;</span></span></a></li>
-<li><a href="#orga16bef4">3. Sequence diagram (Jekyll) <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-03 Wed 14:05&gt;</span></span></a></li>
-<li><a href="#org952db52">4. about jekyll <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-03 Wed 13:59&gt;</span></span></a>
+<li><a href="#org3466f0a">2. about Jekyll Feedback <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-08 Mon 11:23&gt;</span></span></a>
 <ul>
-<li><a href="#org3e4401e">4.1. How to install Jekyll</a></li>
-<li><a href="#org23142f9">4.2. How to change org-mode to Jekyll</a>
+<li><a href="#org29fe036">2.1. How to remove .md file in _posts</a></li>
+</ul>
+</li>
+<li><a href="#org3584dda">3. Questions for Jekyll <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-04 Thu 23:20&gt;</span></span></a></li>
+<li><a href="#org020a39f">4. Sequence diagram (Jekyll) <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-03 Wed 14:05&gt;</span></span></a></li>
+<li><a href="#org030f89d">5. about jekyll <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-03 Wed 13:59&gt;</span></span></a>
 <ul>
-<li><a href="#org03da07b">4.2.1. Questions</a></li>
+<li><a href="#orgcfabf2e">5.1. How to install Jekyll</a></li>
+<li><a href="#org9acf291">5.2. How to change org-mode to Jekyll</a>
+<ul>
+<li><a href="#orgc252259">5.2.1. Questions</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org9946ca7">5. Sequence diagram (ornb) <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-01 Mon 12:09&gt;</span></span></a></li>
-<li><a href="#org3212422">6. about FeedBack <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-24 Mon 15:46&gt;</span></span></a></li>
-<li><a href="#org874007f">7. about ornb <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-17 Mon 15:15&gt;</span></span></a>
+<li><a href="#org6d252ad">6. Sequence diagram (ornb) <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-01 Mon 12:09&gt;</span></span></a></li>
+<li><a href="#org8a2edc5">7. about FeedBack <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-24 Mon 15:46&gt;</span></span></a></li>
+<li><a href="#orgd43f461">8. about ornb <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-17 Mon 15:15&gt;</span></span></a>
 <ul>
-<li><a href="#org8e95bc4">7.1. Questions <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-23 Sun 12:22&gt;</span></span></a>
+<li><a href="#orgc040943">8.1. Questions <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-23 Sun 12:22&gt;</span></span></a>
 <ul>
-<li><a href="#org1b22df8">7.1.1. 河野</a></li>
+<li><a href="#org326ad07">8.1.1. 河野</a></li>
 </ul>
 </li>
-<li><a href="#org2388514">7.2. 課題 <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-24 Mon 12:21&gt;</span></span></a></li>
-<li><a href="#orga4ab8b6">7.3. Points <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-24 Mon 12:22&gt;</span></span></a></li>
+<li><a href="#org626ddd9">8.2. 課題 <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-24 Mon 12:21&gt;</span></span></a></li>
+<li><a href="#org16b4738">8.3. Points <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-24 Mon 12:22&gt;</span></span></a></li>
 </ul>
 </li>
-<li><a href="#org2c8f805">8. about my_help <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-17 Mon 14:05&gt;</span></span></a>
+<li><a href="#org138778a">9. about my_help <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-17 Mon 14:05&gt;</span></span></a>
 <ul>
-<li><a href="#org53c0127">8.1. How to install my_help</a></li>
-<li><a href="#org0e6267c">8.2. How to edit my_help</a>
+<li><a href="#orgc5ad854">9.1. How to install my_help</a></li>
+<li><a href="#org1d8b81c">9.2. How to edit my_help</a>
 <ul>
-<li><a href="#org732eb42">8.2.1. about timestamp</a></li>
-<li><a href="#orgcad4249">8.2.2. about URL</a></li>
+<li><a href="#orge37455a">9.2.1. about timestamp</a></li>
+<li><a href="#org15e1157">9.2.2. about URL</a></li>
 </ul>
 </li>
-<li><a href="#orgeb7f89c">8.3. How to show on my iPhone</a></li>
+<li><a href="#orge30578a">9.3. How to show on my iPhone</a></li>
 </ul>
 </li>
-<li><a href="#orgda630ee">9. about Latex <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-17 Mon 14:21&gt;</span></span></a></li>
+<li><a href="#org776134c">10. about Latex <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-17 Mon 14:21&gt;</span></span></a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgf829dab" class="outline-2">
-<h2 id="orgf829dab"><span class="section-number-2">1</span> about Jekyll Feedback <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-08 Mon 11:23&gt;</span></span></h2>
+<div id="outline-container-orgf6a3fc6" class="outline-2">
+<h2 id="orgf6a3fc6"><span class="section-number-2">1</span> about conv and jekyll (Qiita) <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-11 Thu 14:34&gt;</span></span></h2>
 <div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org78992d5" class="outline-3">
+<h3 id="org78992d5"><span class="section-number-3">1.1</span> org-modeからJekyllに変換した際にorg内で記述した画像ファイルがJekyllに反映されない問題の解決方法</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+<b>conv_md_and_storeファイルに下記のコードを追加</b>
+</p>
+
+<blockquote>
+<pre class="example">
+$target2 = File.join ENV['HOME'],'.my_help/img/' #各自のディレクトリ名に変更
+$jekyll_img_path = File.join ENV['HOME'],'Final/r4nd/img/' #各自のディレクトリ名に変更
+</pre>
+</blockquote>
+
+<p>
+<span class="underline">解説</span>
+</p>
+<ul class="org-ul">
+<li>$target2は.my_helpディレクトリに画像専用のディレクトリを作りそこまでのpathとする．</li>
+<li>Jekyll_img_pathはJekyllのディレクトリ内に画像専用ディレクトリを作り，そこまでのpathとする．</li>
+</ul>
+
+<blockquote>
+<pre class="example">
+img = line.match /\[\[file:(.*)\/(.*)\]\]/\
+if img != nil
+  img_path = $target2 + img[2]
+  puts 'copy_image_name -&gt; '.yellow + img[2].green
+  FileUtils.cp(img_path, $jekyll_img_path)
+end
+</pre>
+</blockquote>
+
+<p>
+<span class="underline">解説</span>
+</p>
+<ul class="org-ul">
+<li>orgファイルを１行ずつ読み，画像ファイルの名前だけを抽出．(img[2])</li>
+<li>その中身を.my_help内のimgディレクトリからJekyll内のimgディレクトリへコピーする．</li>
+</ul>
+
+<p>
+<span class="underline">結果</span>
+</p>
+
+
+<div class="figure">
+<p><img src="img/png_result.png" alt="png_result.png" />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgc56ac65" class="outline-3">
+<h3 id="orgc56ac65"><span class="section-number-3">1.2</span> Jekyll(Theme:cayman)でorg-mode編集日時の反映方法</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+p 'oshibori'
+   <b>JekyllのDirectory内にblog.mdを作り以下のコードを入力する</b>
+   p 'Hi'
+</p>
+<blockquote>
+<pre class="example">
+---
+layout: default
+title: Blog
+---
+&lt;h1&gt;Latest Posts&lt;/h1&gt;
+&lt;ul&gt;
+{% for post in site.posts %}
+&lt;li&gt;
+&lt;h2&gt;&lt;a href="{{ post.url | relative_url }}"&gt;
+{{ post.date | date: '%Y/%m/%d-%A' }} : {{ post.title }}
+&lt;/a&gt;&lt;/h2
+&lt;p&gt;{{ post.excerpt }}&lt;/p&gt;
+&lt;/li&gt;
+{% endfor %}  
+&lt;/ul&gt; 
+</pre>
+</blockquote>
+
+<p>
+<span class="underline">結果</span>
+</p>
+
+
+<div class="figure">
+<p><img src="img/date_result.png" alt="date_result.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3466f0a" class="outline-2">
+<h2 id="org3466f0a"><span class="section-number-2">2</span> about Jekyll Feedback <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-08 Mon 11:23&gt;</span></span></h2>
+<div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>org-modeからJekyllにした時にpngが表示されない問題の解決.
 <ul class="org-ul">
 <li>done</li>
-<li></li>
 </ul></li>
 
 <li>jekyllで時間表示をできるようにする.
 <ul class="org-ul">
 <li>done</li>
-<li>blog.md をいじる.</li>
 </ul></li>
 
 <li>Qiitaに紹介記事を書くつもりで1,2を解決する.</li>
 </ul>
 </div>
 
-<div id="outline-container-org54983f9" class="outline-3">
-<h3 id="org54983f9"><span class="section-number-3">1.1</span> How to remove .md file in _posts</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org29fe036" class="outline-3">
+<h3 id="org29fe036"><span class="section-number-3">2.1</span> How to remove .md file in _posts</h3>
+<div class="outline-text-3" id="text-2-1">
 <blockquote>
 <pre class="example">
 - Dir.glob(dir) 
@@ -322,9 +425,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org786dab3" class="outline-2">
-<h2 id="org786dab3"><span class="section-number-2">2</span> Questions for Jekyll <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-04 Thu 23:20&gt;</span></span></h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org3584dda" class="outline-2">
+<h2 id="org3584dda"><span class="section-number-2">3</span> Questions for Jekyll <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-04 Thu 23:20&gt;</span></span></h2>
+<div class="outline-text-2" id="text-3">
 <ol class="org-ol">
 <li>jekyllへ変換する流れをシーケンス図で描く．
 <ul class="org-ul">
@@ -354,22 +457,22 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orga16bef4" class="outline-2">
-<h2 id="orga16bef4"><span class="section-number-2">3</span> Sequence diagram (Jekyll) <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-03 Wed 14:05&gt;</span></span></h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org020a39f" class="outline-2">
+<h2 id="org020a39f"><span class="section-number-2">4</span> Sequence diagram (Jekyll) <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-03 Wed 14:05&gt;</span></span></h2>
+<div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li><img src="img/jekyll.png" alt="jekyll.png" /></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org952db52" class="outline-2">
-<h2 id="org952db52"><span class="section-number-2">4</span> about jekyll <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-03 Wed 13:59&gt;</span></span></h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org030f89d" class="outline-2">
+<h2 id="org030f89d"><span class="section-number-2">5</span> about jekyll <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-03 Wed 13:59&gt;</span></span></h2>
+<div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org3e4401e" class="outline-3">
-<h3 id="org3e4401e"><span class="section-number-3">4.1</span> How to install Jekyll</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-orgcfabf2e" class="outline-3">
+<h3 id="orgcfabf2e"><span class="section-number-3">5.1</span> How to install Jekyll</h3>
+<div class="outline-text-3" id="text-5-1">
 <ol class="org-ol">
 <li>Qiita jekyll install で検索 -&gt;  <b><a href="https://qiita.com/daddygongon/items/9b7182db29861744fc79">jekyllのinstallとGithub Pageとの連携</a></b></li>
 <li>gem install bundler jekyll</li>
@@ -385,9 +488,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org23142f9" class="outline-3">
-<h3 id="org23142f9"><span class="section-number-3">4.2</span> How to change org-mode to Jekyll</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-org9acf291" class="outline-3">
+<h3 id="org9acf291"><span class="section-number-3">5.2</span> How to change org-mode to Jekyll</h3>
+<div class="outline-text-3" id="text-5-2">
 <ol class="org-ol">
 <li>Qiita org-mode Jekylle で検索 -&gt;  <b><a href="https://qiita.com/daddygongon/items/d803d9ce6d75bef3179a">org-modeからjekyllへの自動配置</a></b></li>
 <li>emacs conv_md_and_store.rb</li>
@@ -413,9 +516,9 @@ for the JavaScript code in this tag.
 </ol>
 </div>
 
-<div id="outline-container-org03da07b" class="outline-4">
-<h4 id="org03da07b"><span class="section-number-4">4.2.1</span> Questions</h4>
-<div class="outline-text-4" id="text-4-2-1">
+<div id="outline-container-orgc252259" class="outline-4">
+<h4 id="orgc252259"><span class="section-number-4">5.2.1</span> Questions</h4>
+<div class="outline-text-4" id="text-5-2-1">
 <ul class="org-ul">
 <li>rbenv install 2.6.3</li>
 <li>rbenv global 2.6.3
@@ -430,18 +533,18 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org9946ca7" class="outline-2">
-<h2 id="org9946ca7"><span class="section-number-2">5</span> Sequence diagram (ornb) <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-01 Mon 12:09&gt;</span></span></h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-org6d252ad" class="outline-2">
+<h2 id="org6d252ad"><span class="section-number-2">6</span> Sequence diagram (ornb) <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-07-01 Mon 12:09&gt;</span></span></h2>
+<div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><img src="img/ornb.png" alt="ornb.png" /></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org3212422" class="outline-2">
-<h2 id="org3212422"><span class="section-number-2">6</span> about FeedBack <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-24 Mon 15:46&gt;</span></span></h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-org8a2edc5" class="outline-2">
+<h2 id="org8a2edc5"><span class="section-number-2">7</span> about FeedBack <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-24 Mon 15:46&gt;</span></span></h2>
+<div class="outline-text-2" id="text-7">
 <ul class="org-ul">
 <li>全体の流れ</li>
 <li>CSVファイルを作成する流れ</li>
@@ -449,21 +552,21 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org874007f" class="outline-2">
-<h2 id="org874007f"><span class="section-number-2">7</span> about ornb <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-17 Mon 15:15&gt;</span></span></h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-orgd43f461" class="outline-2">
+<h2 id="orgd43f461"><span class="section-number-2">8</span> about ornb <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-17 Mon 15:15&gt;</span></span></h2>
+<div class="outline-text-2" id="text-8">
 <ul class="org-ul">
 <li>Browse <b><a href="https://ist.ksc.kwansei.ac.jp/~nishitani/?MBTheses">here</a></b></li>
 </ul>
 </div>
 
-<div id="outline-container-org8e95bc4" class="outline-3">
-<h3 id="org8e95bc4"><span class="section-number-3">7.1</span> Questions <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-23 Sun 12:22&gt;</span></span></h3>
-<div class="outline-text-3" id="text-7-1">
+<div id="outline-container-orgc040943" class="outline-3">
+<h3 id="orgc040943"><span class="section-number-3">8.1</span> Questions <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-23 Sun 12:22&gt;</span></span></h3>
+<div class="outline-text-3" id="text-8-1">
 </div>
-<div id="outline-container-org1b22df8" class="outline-4">
-<h4 id="org1b22df8"><span class="section-number-4">7.1.1</span> 河野</h4>
-<div class="outline-text-4" id="text-7-1-1">
+<div id="outline-container-org326ad07" class="outline-4">
+<h4 id="org326ad07"><span class="section-number-4">8.1.1</span> 河野</h4>
+<div class="outline-text-4" id="text-8-1-1">
 <ol class="org-ol">
 <li>orgファイルからどのようにしてpdfファイルを抽出しcsvファイルにするのか
 <ul class="org-ul">
@@ -489,9 +592,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org2388514" class="outline-3">
-<h3 id="org2388514"><span class="section-number-3">7.2</span> 課題 <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-24 Mon 12:21&gt;</span></span></h3>
-<div class="outline-text-3" id="text-7-2">
+<div id="outline-container-org626ddd9" class="outline-3">
+<h3 id="org626ddd9"><span class="section-number-3">8.2</span> 課題 <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-24 Mon 12:21&gt;</span></span></h3>
+<div class="outline-text-3" id="text-8-2">
 <ul class="org-ul">
 <li>ユースケース図(動作が起こる一連の流れの図)</li>
 
@@ -511,9 +614,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orga4ab8b6" class="outline-3">
-<h3 id="orga4ab8b6"><span class="section-number-3">7.3</span> Points <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-24 Mon 12:22&gt;</span></span></h3>
-<div class="outline-text-3" id="text-7-3">
+<div id="outline-container-org16b4738" class="outline-3">
+<h3 id="org16b4738"><span class="section-number-3">8.3</span> Points <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-24 Mon 12:22&gt;</span></span></h3>
+<div class="outline-text-3" id="text-8-3">
 <ul class="org-ul">
 <li>テスト
 <ul class="org-ul">
@@ -525,13 +628,13 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org2c8f805" class="outline-2">
-<h2 id="org2c8f805"><span class="section-number-2">8</span> about my_help <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-17 Mon 14:05&gt;</span></span></h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-org138778a" class="outline-2">
+<h2 id="org138778a"><span class="section-number-2">9</span> about my_help <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-17 Mon 14:05&gt;</span></span></h2>
+<div class="outline-text-2" id="text-9">
 </div>
-<div id="outline-container-org53c0127" class="outline-3">
-<h3 id="org53c0127"><span class="section-number-3">8.1</span> How to install my_help</h3>
-<div class="outline-text-3" id="text-8-1">
+<div id="outline-container-orgc5ad854" class="outline-3">
+<h3 id="orgc5ad854"><span class="section-number-3">9.1</span> How to install my_help</h3>
+<div class="outline-text-3" id="text-9-1">
 <ol class="org-ol">
 <li>gem install my_help</li>
 <li>my_help list</li>
@@ -542,13 +645,13 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org0e6267c" class="outline-3">
-<h3 id="org0e6267c"><span class="section-number-3">8.2</span> How to edit my_help</h3>
-<div class="outline-text-3" id="text-8-2">
+<div id="outline-container-org1d8b81c" class="outline-3">
+<h3 id="org1d8b81c"><span class="section-number-3">9.2</span> How to edit my_help</h3>
+<div class="outline-text-3" id="text-9-2">
 </div>
-<div id="outline-container-org732eb42" class="outline-4">
-<h4 id="org732eb42"><span class="section-number-4">8.2.1</span> about timestamp</h4>
-<div class="outline-text-4" id="text-8-2-1">
+<div id="outline-container-orge37455a" class="outline-4">
+<h4 id="orge37455a"><span class="section-number-4">9.2.1</span> about timestamp</h4>
+<div class="outline-text-4" id="text-9-2-1">
 <ul class="org-ul">
 <li>C-u &gt; C-c &gt; .</li>
 <li>C-c &gt; .</li>
@@ -556,9 +659,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgcad4249" class="outline-4">
-<h4 id="orgcad4249"><span class="section-number-4">8.2.2</span> about URL</h4>
-<div class="outline-text-4" id="text-8-2-2">
+<div id="outline-container-org15e1157" class="outline-4">
+<h4 id="org15e1157"><span class="section-number-4">9.2.2</span> about URL</h4>
+<div class="outline-text-4" id="text-9-2-2">
 <ol class="org-ol">
 <li>C-c &gt; C-l</li>
 </ol>
@@ -566,9 +669,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgeb7f89c" class="outline-3">
-<h3 id="orgeb7f89c"><span class="section-number-3">8.3</span> How to show on my iPhone</h3>
-<div class="outline-text-3" id="text-8-3">
+<div id="outline-container-orge30578a" class="outline-3">
+<h3 id="orge30578a"><span class="section-number-3">9.3</span> How to show on my iPhone</h3>
+<div class="outline-text-3" id="text-9-3">
 <ul class="org-ul">
 <li>Browse <b><a href="https://qiita.com/daddygongon/items/e1495e95b1a0453c1084">here</a></b></li>
 </ul>
@@ -576,9 +679,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgda630ee" class="outline-2">
-<h2 id="orgda630ee"><span class="section-number-2">9</span> about Latex <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-17 Mon 14:21&gt;</span></span></h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-org776134c" class="outline-2">
+<h2 id="org776134c"><span class="section-number-2">10</span> about Latex <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-06-17 Mon 14:21&gt;</span></span></h2>
+<div class="outline-text-2" id="text-10">
 <ul class="org-ul">
 <li>Browse <b><a href="http://osksn2.hep.sci.osaka-u.ac.jp/~taku/osx/install_ptex.html">here</a></b></li>
 </ul>
@@ -587,7 +690,7 @@ for the JavaScript code in this tag.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: r4nd</p>
-<p class="date">Created: 2019-07-10 Wed 16:45</p>
+<p class="date">Created: 2019-07-11 Thu 16:08</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
